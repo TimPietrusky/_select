@@ -1,0 +1,136 @@
+@import "compass/css3";
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/wkfQbvfT_02e2IWO3yYueQ.woff) format('woff');
+}
+
+$emw--color-alpha: #2ecc71;
+$emw--color-beta: #3498db;
+
+$emw--unit-alpha: 1.25em;
+$emw--unit-beta: $emw--unit-alpha * 1.25;
+$emw--unit-gamma: .085s;
+
+body {
+  font: 400 $emw--unit-alpha 'Lato', sans-serif;
+  line-height: $emw--unit-beta;
+  margin: 0;
+}
+
+a {
+  color: $emw--color-beta;
+  text-decoration: none;
+  
+  &.alpha {
+    padding: .5em;
+    
+    @include transition(
+      background $emw--unit-gamma ease-in-out,
+      color $emw--unit-gamma ease-in-out
+    );
+    
+    &:hover {
+      background: $emw--color-beta;
+      color: #fff;
+    }
+  }
+}
+
+h1 {
+  display: inline-block;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #fff;
+  background: #000;
+  padding: .5em;
+  margin: .25em 0 .5em 0;
+}
+
+section {
+  padding: 0 .75em;
+  
+  &.alpha {
+    border-top: .15em solid #ccc;
+  }
+}
+
+button {
+  font: inherit;
+  height: 2.5em;
+  background: $emw--color-alpha;
+  border: none;
+  padding: .5em;
+  margin: 0 $emw--unit-beta;
+  color: lighten($emw--color-alpha, 65%);
+  cursor: pointer;
+  
+  box-shadow: 
+    .1em .1em 0 .025em rgba(darken($emw--color-alpha, 15%), .9)
+  ;
+  
+  @include transition(
+    box-shadow $emw--unit-gamma ease-in-out,
+    transform $emw--unit-gamma ease-in-out
+  );
+  
+  &:hover {
+    @include transform(scale(1.25, 1.25));
+    
+    box-shadow: 
+      .1em .1em 0 .525em rgba(darken($emw--color-alpha, 15%), .2)
+    ;
+  }
+  
+  &:active {
+    @include transform(scale(.95, .95));
+    
+    box-shadow: 
+      none
+    ;
+  }
+  
+  &.button--alpha {
+    
+  }
+}
+
+input,
+textarea {
+  display: block;
+  font-size: $emw--unit-alpha * .85;
+  width: 100%;
+  border: .1em solid #ddd;
+}
+
+code {
+  background: #ddd;
+  padding: .25em;
+}
+
+pre {
+  background: #ddd;
+  padding: .25em;
+  overflow: auto;
+  
+  code {
+    background: none;
+    padding: 0;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
