@@ -20,6 +20,20 @@ function _select(el) {
   try {
     // Try the default select() for input / textarea
     el.select();
+
+    // Try to disable mouseup on input / textarea
+    // in order to don't lose focus on some (mobile) devices 
+    // -> forced focus!
+    try {
+      if (typeof(el.dataset.mouseup) === 'undefined') {
+        el.dataset.mouseup = 'true';
+        
+        // Disable mouseup on intput / textarea
+        el.addEventListener('mouseup', function(e) {
+          e.preventDefault();
+        }, false); 
+      }
+    } catch(e) {}
   } catch(e) {
     
     // Fallback for most browsers
@@ -38,6 +52,7 @@ function _select(el) {
     }
   }
 }
+
 
 
 
@@ -62,6 +77,11 @@ function bind(el, eventName, eventHandler) {
   }
 }
 
+/**
+ *
+ * Bind click events for all the 5 demos.
+ *
+ */ 
 bind('demo1', 'click', function () {
   _select(this);
 });
