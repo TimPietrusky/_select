@@ -4,8 +4,8 @@ _select()
 <button>_select.min.js</button>
 </a>
 
-<a href="http://github.com/TimPietrusky/_select" target="_blank" class="alpha">
-on GitHub
+<a href="http://timpietrusky.com/_select" target="_blank" class="alpha">
+timpietrusky.com/_select
 </a>
 
 <section>
