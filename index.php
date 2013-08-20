@@ -19,11 +19,12 @@
     <link rel='stylesheet prefetch' href='http://yui.yahooapis.com/combo?pure/0.2.1/grids-min.css'>
     <link rel="stylesheet" href="css/select.css">
 
-    <?php // <link rel="shortcut icon" href="img/.ico" type="image/x-icon">  ?>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> 
 </head>
 
 <body>
     
+
 
 <div class="pure-g">
   <div class="pure-u-1">
@@ -40,13 +41,12 @@
 <div class="pure-g">
   <div class="pure-u-1">
     <section class="center">
-            
-      <a href="http://github.com/TimPietrusky/_select" target="_blank" class="alpha">
-        on GitHub
+      284 bytes gzipped<a href="https://raw.github.com/TimPietrusky/_select/master/js/_select.min.js" target="_blank">
+        <button>_select.min.js</button>
       </a>
       
-      <a href="http://github.com/TimPietrusky/_select" target="_blank">
-        <button class="button--alpha">_select.min.js</button>
+      <a href="http://github.com/TimPietrusky/_select" target="_blank" class="alpha">
+        on GitHub
       </a>
     </section>
   </div>
@@ -78,7 +78,8 @@
         
         <p>
           <ul>
-            <li>Aggressive focus for <code>input</code> / <code>textarea</code>: Disabled <code>mouseup</code> event</li>
+            <li>Aggressive focus for <code>input</code> / <code>textarea</code>:<br>
+              Selects the whole content of a text element with one click or touch.</li>
           </ul>
         </p>
        </section>
@@ -86,7 +87,7 @@
 
   
   
-    <div class="pure-u-1-3">
+    <div class="pure-u-1-3 demo6">
        <section>
         <h2>Demo</h2>
         
@@ -94,11 +95,11 @@
          
         <p class="demo2">You can also select <span>child elements</span> if the parent gets a click. </p>
          
-        <input class="demo3" type="text" value="This is an input." spellcheck="false" />
+        <input class="demo3" type="text" value="This is an input with forced focus." spellcheck="false" />
         
         <br><br>
         
-        <textarea class="demo4" cols="30" rows="5" spellcheck="false">This is a textarea.</textarea>
+        <textarea class="demo4" cols="30" rows="5" spellcheck="false">This is a textarea with forced focus.</textarea>
           
         <p>
           The <code>img</code> needs a wrapper element in order to be selectable. 
@@ -106,6 +107,12 @@
           
         <p class="demo5 center">
           <img src="http://placekitten.com/g/400/200" alt="" />
+        </p>
+          
+        <hr />
+          
+        <p class="center">
+          <button class="demo6--button button--alpha">Select the whole column!</button>
         </p>
        </section>
     </div>
@@ -115,6 +122,8 @@
     <div class="pure-u-1-3">
       <section>
         <h2>How to</h2>
+        
+        <p>Download <code>_select.min.js</code> and include it into your page / script. </p>
         
         <b>Vanilla JavaScript</b>
         <pre><code>var el = document.querySelector('.demo');
