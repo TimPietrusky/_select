@@ -7,6 +7,9 @@
  *
  * _select(document.querySelector('.class')) or 
  * _select($('.class'))
+ *
+ * timpietrusky.com/_select
+ * 
  * 
  * 2013 by Tim Pietrusky
  * timpietrusky.com
@@ -100,4 +103,8 @@ bind('demo4', 'click', function () {
 
 bind('demo5', 'click', function () {
   _select(this);
+});
+
+bind('demo6--button', 'click', function () {
+  _select(document.getElementsByClassName('demo6')[0]);
 });
