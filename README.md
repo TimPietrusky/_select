@@ -34,38 +34,6 @@ on GitHub
 </p>
 </section>
 
-  
-  
-<section>
-<h2>Demo</h2>
-
-<div class="demo1">Just click anywhere inside me to select the whole text.</div>
- 
-<p class="demo2">You can also select <span>child elements</span> if the parent gets a click. </p>
- 
-<input class="demo3" type="text" value="This is an input with forced focus." spellcheck="false" />
-
-<br><br>
-
-<textarea class="demo4" cols="30" rows="5" spellcheck="false">This is a textarea with forced focus.</textarea>
-  
-<p>
-  The <code>img</code> needs a wrapper element in order to be selectable. 
-</p>
-  
-<p class="demo5 center">
-  <img src="http://placekitten.com/g/400/200" alt="" />
-</p>
-  
-<hr />
-  
-<p class="center">
-  <button class="demo6--button button--alpha">Select the whole column!</button>
-</p>
-</section>
-
-     
-     
 <section>
     <h2>How to</h2>
     
