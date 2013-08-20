@@ -35,24 +35,27 @@ on GitHub
 </section>
 
 <section>
-    <h2>How to</h2>
-    
-    <p>Download <code>_select.min.js</code> and include it into your page / script. </p>
-    
-    <b>Vanilla JavaScript</b>
-    <pre><code>var el = document.querySelector('.demo');
+<h2>How to</h2>
 
-el.addEventListener('click', function() {
-  _select(this);
-});</code></pre>
+<p>Download <code>_select.min.js</code> and include it into your page / script. </p>
+
+<b>Vanilla JavaScript</b>
+
+	var el = document.querySelector('.demo');
+
+	el.addEventListener('click', function() {
+	  _select(this);
+	});
         
-        <b>jQuery</b>
-        <pre><code>var el = $('.demo');    
+<b>jQuery</b>
 
-el.on('click', function() {
-  _select(this);
-});</code></pre>
-      </section>
+	var el = $('.demo');    
+
+	el.on('click', function() {
+	  _select(this);
+	});
+	
+</section>
       
 <div class="pure-g">
   <div class="pure-u-1">
